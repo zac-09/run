@@ -366,7 +366,7 @@
 
         function soilData(){
           var xhr = new XMLHttpRequest();
-            xhr.open('GET','../send.php',true);
+            xhr.open('GET','classes/send.php',true);
            
 
             xhr.onload = function(){
