@@ -1,5 +1,5 @@
 <?php
-require_once './core/int.php ';
+require_once './../core/int.php ';
 
 
 
@@ -80,6 +80,14 @@ else {
 return $this;
 
 }
+public function getData(){
+    $sql = "SELECT * FROM sensors ORDER BY created_at DESC LIMIT 12 ";
+    
+    $this->query($sql,[]);
+    $results = $this->result();
+    return $results;
+}
+
 public function action($action,$table,$where = array()){
 if(count($where) === 3)
 {
@@ -186,10 +194,10 @@ $text_new = explode("*", $text);
 $new_text = strtolower($text_new[1]);
 
 $sql =  "SELECT * FROM contacts_health_centres WHERE district=?";
-$querry =$this->query($sql,array($new_text));
+$query =$this->query($sql,array($new_text));
 
 $resultse = $this->result();
-$response = '';
+$response = 'END ';
 $n = 1;
 foreach($resultse as $result=>$value){
 $response .= "$n. $value->contact_name  you can call on $value->phone_number  \n";  

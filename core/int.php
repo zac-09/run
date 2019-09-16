@@ -1,5 +1,5 @@
 <?php
-require_once './classes/config.php';
+require_once './../classes/config.php';
 
 session_start();
 
@@ -25,7 +25,7 @@ $GLOBALS['config']= array(
 );
 
 spl_autoload_register(function ($class){
-    require_once 'classes/'.$class.'.php';
+    require_once '../classes/'.$class.'.php';
 });
 if(cookie::exists(config::get('cokie/cokie_name')) && !session::exists(config::get('session/session_name'))){
 $harsh = cookie::get(config::get('cookie/cokie_name'));
@@ -39,6 +39,6 @@ if($harsh->count()){
 
 
 
-require_once './functions/sanitize.php';
+require_once './../functions/sanitize.php';
 
 ?>
