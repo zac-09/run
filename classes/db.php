@@ -15,10 +15,10 @@ private static $_instance = null;
  public function __construct(){
 
 
-    $host = config::get('mysql/host');
-    $username = config::get('mysql/username');
-    $password = config::get('mysql/password');
-    $db = config::get('mysql/db');
+    $host = 'localhost';
+    $username = "zac";
+    $password = '1999angella';
+    $db = 'zac';
 
     try {
 $this->_pdo = new PDO('mysql:host='.$host.';dbname='.$db.'',$username,$password);
