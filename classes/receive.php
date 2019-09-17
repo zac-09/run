@@ -1,6 +1,6 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . "/core/int.php";
-
+require_once $_SERVER['DOCUMENT_ROOT'] . "/classes/post.php";
 $dht = $_GET['dht'];
 $water = $_GET['water'];
 $humidity = $_GET['humidity'];
