@@ -38,7 +38,7 @@ if($harsh->count()){
 }
 
 
-
+echo 'cool';
 require_once $_SERVER['DOCUMENT_ROOT'] . "/functions/sanitize.php";
 
 ?>
