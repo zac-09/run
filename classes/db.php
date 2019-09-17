@@ -16,7 +16,7 @@ private static $_instance = null;
 
 
     $host = 'localhost';
-    $username = "zac";
+    $username = 'zac';
     $password = '1999angella';
     $db = 'zac';
 
