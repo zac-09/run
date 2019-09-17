@@ -1,7 +1,7 @@
 <?php
  require_once $_SERVER['DOCUMENT_ROOT'] . "/classes/config.php";
 
-echo 'okay';
+
 session_start();
 
 $GLOBALS['config']= array(
@@ -39,7 +39,7 @@ if($harsh->count()){
 }
 
 
-echo 'cool';
+
 require_once $_SERVER['DOCUMENT_ROOT'] . "/functions/sanitize.php";
 
 ?>
