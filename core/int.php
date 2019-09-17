@@ -1,5 +1,6 @@
 <?php
  require_once $_SERVER['DOCUMENT_ROOT'] . "/classes/config.php";
+ require_once $_SERVER['DOCUMENT_ROOT'] . "/classes".$class.'.php';
 echo 'okay';
 session_start();
 
@@ -25,7 +26,7 @@ $GLOBALS['config']= array(
 );
 
 spl_autoload_register(function ($class){
-    require_once $_SERVER['DOCUMENT_ROOT'] . "/classes".$class.'.php';
+ require_once $_SERVER['DOCUMENT_ROOT'] . "/classes".$class.'.php';
 });
 if(cookie::exists(config::get('cokie/cokie_name')) && !session::exists(config::get('session/session_name'))){
 $harsh = cookie::get(config::get('cookie/cokie_name'));
