@@ -9,7 +9,7 @@
 // var_dump($result);
 
 $host = 'localhost';
-$username = 'zaca';
+$username = 'zac';
 $password = '1999angella';
 $db = 'zac';
 
