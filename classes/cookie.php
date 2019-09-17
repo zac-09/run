@@ -1,5 +1,5 @@
 <?php
-require_once './../core/int.php ';
+require_once $_SERVER['DOCUMENT_ROOT'] . "/core/int.php";
 
 class cookie{
 public static function exists($name){

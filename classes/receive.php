@@ -1,5 +1,5 @@
 <?php
- require_once './../core/int.php ';
+require_once $_SERVER['DOCUMENT_ROOT'] . "/core/int.php";
 
 $dht = $_GET['dht'];
 $water = $_GET['water'];

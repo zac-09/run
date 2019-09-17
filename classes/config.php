@@ -1,6 +1,6 @@
 <?php
 
-require_once './../core/int.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . "/core/int.php";
 class config{
 public static function get ($path=NULL){
     if($path){

@@ -1,7 +1,7 @@
 <?php
 header('Content-Type: application/json');
-require './../vendor/autoload.php';
-require_once './../core/int.php ';
+require_once $_SERVER['DOCUMENT_ROOT'] . "/vendor/autoload.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/core/int.php";
 use Carbon\Carbon;
 $db = new DB();
  
