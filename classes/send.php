@@ -1,8 +1,8 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . "/core/int.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/classes/db.php";
+echo 'im alright'; 
 
-
-echo 'okay';
 //  $db = new DB();
 //  $db->getData();
 // $result = $db->first() ;
