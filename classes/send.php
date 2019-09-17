@@ -1,5 +1,5 @@
 <?php
-require_once '/var/www/run/index.php ';
+require_once $_SERVER['DOCUMENT_ROOT'] . "/register.php";
 
 
 
