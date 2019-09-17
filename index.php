@@ -11,7 +11,7 @@
 $host = 'localhost';
 $username = 'zac';
 $password = '1999angella';
-$db = 'zac';
+$db = 'zaac';
 
 try {
 $pdo = new PDO('mysql:host='.$host.';dbname='.$db.'',$username,$password);
