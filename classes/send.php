@@ -1,8 +1,7 @@
 <?php
-//require_once $_SERVER['DOCUMENT_ROOT'] . "/core/int.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/register.html";
 
 
-echo "okay";
 
 //  $db = new DB();
 //  $db->getData();
