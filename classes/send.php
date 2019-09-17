@@ -1,5 +1,5 @@
 <?php
-require_once '../core/int.php ';
+require_once '../index.php ';
 die('kawa');
 
 
