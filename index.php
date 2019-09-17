@@ -14,13 +14,13 @@ $password = '1999angella';
 $db = 'zac';
 
 try {
-$this->_pdo = new PDO('mysql:host='.$host.';dbname='.$db.'',$username,$password);
-
+$pdo = new PDO('mysql:host='.$host.';dbname='.$db.'',$username,$password);
+echo 'sucesss';
 }
 catch (PDOException $e)
 {
-  echo 'hello world';
-    //die($e->getMessage());
+  
+    die($e->getMessage());
 
 }
 
