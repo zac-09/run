@@ -280,7 +280,7 @@ var myLineChart = new Chart(ctx, {
 
 $(document).ready(function(){
   $.ajax({
-    url : "http://localhost/run/classes/lineGraph.php",
+    url : "http://134.209.193.225/classes/lineGraph.php",
     type : "GET",
     success : function(data){
       console.log(data);
