@@ -166,7 +166,7 @@ var myLineChart = new Chart(ctx, {
          
 $("chart-area").mouseover(function(){
   $.ajax({
-    url : "http://134.209.193.225/classes/lineGraph.php",
+    url : "http://localhost/run/classes/lineGraph.php",
     type : "GET",
     success : function(data){
       console.log(data);
