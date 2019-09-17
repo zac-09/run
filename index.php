@@ -1,4 +1,4 @@
-<!-- <?php
+ <?php
 
 // require_once 'classes/db.php';
 // require_once 'core/int.php';
@@ -24,7 +24,7 @@ catch (PDOException $e)
 
 }
 
-// ?> -->
+// ?> 
 
 
 
