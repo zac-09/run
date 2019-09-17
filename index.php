@@ -1,14 +1,14 @@
-<?php
+<!-- <?php
 
-require_once 'classes/db.php';
-require_once 'core/int.php';
+// require_once 'classes/db.php';
+// require_once 'core/int.php';
 
-$db = new DB();
-$db->getData();
-$result = $db->first() ;
-var_dump($result);
+// $db = new DB();
+// $db->getData();
+// $result = $db->first() ;
+// var_dump($result);
 
-?>
+// ?> -->
 
 
 
