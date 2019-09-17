@@ -1,8 +1,8 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . "/core/int.php";
+//require_once $_SERVER['DOCUMENT_ROOT'] . "/core/int.php";
 
-$db = new DB();
-var_dump($db);
+
+
 
 class DB{
 private static $_instance = null;
@@ -228,7 +228,7 @@ return $response;
 }
 
 
-
+$db = new DB();
 
 
 
