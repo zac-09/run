@@ -227,7 +227,7 @@ return $response;
 }
 
 
-
+$db = new DB();
 
 
 
