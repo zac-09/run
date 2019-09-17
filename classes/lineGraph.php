@@ -2,6 +2,8 @@
 header('Content-Type: application/json');
 require_once $_SERVER['DOCUMENT_ROOT'] . "/vendor/autoload.php";
 require_once $_SERVER['DOCUMENT_ROOT'] . "/core/int.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/classes/db.php";
+
 use Carbon\Carbon;
 $db = new DB();
  

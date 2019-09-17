@@ -417,7 +417,7 @@
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Humidity</div>
+                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">PH</div>
                       <div class="row no-gutters align-items-center">
                         <div class="col-auto">
                           <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800" id="humidity-value"></div>
@@ -443,7 +443,7 @@
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Motion</div>
+                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Water Level</div>
                       <div class="h5 mb-0 font-weight-bold text-gray-800" id="pir-value"> <span>W</span></div>
                     </div>
                     <div class="col-auto">
