@@ -1,6 +1,6 @@
 <?php
 require_once './../classes/config.php';
-
+echo 'hello zac';
 session_start();
 
 $GLOBALS['config']= array(

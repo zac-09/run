@@ -8,6 +8,22 @@
 // $result = $db->first() ;
 // var_dump($result);
 echo 'hello world';
+$host = 'localhost';
+$username = 'zac';
+$password = '1999angella';
+$db = 'zac';
+
+try {
+$this->_pdo = new PDO('mysql:host='.$host.';dbname='.$db.'',$username,$password);
+
+}
+catch (PDOException $e)
+{
+
+    die($e->getMessage());
+
+}
+
 // ?>
 
 
