@@ -5,10 +5,10 @@ session_start();
 
 $GLOBALS['config']= array(
 'mysql'=>array(
-    'host'=>'127.0.0.1',
+    'host'=>'localhost',
     'db'=> 'zac',
-   'username'=>'root',
-   'password'=>'',
+   'username'=>'zac',
+   'password'=>'1999angella',
    
 ),
 'cokie'=> array(
