@@ -4,12 +4,12 @@ die('kawa');
 
 
 
- $db = new DB();
- $db->getData();
-$result = $db->first() ;
-$results = json_encode($result);
+//  $db = new DB();
+//  $db->getData();
+// $result = $db->first() ;
+// $results = json_encode($result);
 
-echo $results;
+// echo $results;
 //  echo  json_encode($db);
 
 
