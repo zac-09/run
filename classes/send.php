@@ -6,11 +6,11 @@ echo 'im alright';
  $db = new DB();
  $db->getData();
 $result = $db->first() ;
-var_dump($result);
-// $results = json_encode($result);
 
-// echo $results;
-//  echo  json_encode($db);
+ $results = json_encode($result);
+
+ echo $results;
+  echo  json_encode($db);
 
 
 
