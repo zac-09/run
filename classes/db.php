@@ -22,7 +22,7 @@ private static $_instance = null;
 
     try {
 $this->_pdo = new PDO('mysql:host='.$host.';dbname='.$db.'',$username,$password);
-
+        echo 'successfully connected to db';
     }
     catch (PDOException $e)
     {
