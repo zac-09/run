@@ -19,7 +19,6 @@ private static $_instance = null;
     $username = 'zac';
     $password = '1999angella';
     $db = 'zac';
-
     try {
 $this->_pdo = new PDO('mysql:host='.$host.';dbname='.$db.'',$username,$password);
         echo 'successfully connected to db';

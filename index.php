@@ -1,4 +1,30 @@
+<!-- <?php
 
+// require_once 'classes/db.php';
+// require_once 'core/int.php';
+
+// $db = new DB();
+// $db->getData();
+// $result = $db->first() ;
+// var_dump($result);
+
+$host = 'localhost';
+$username = 'zac';
+$password = '1999angella';
+$db = 'zac';
+
+try {
+$pdo = new PDO('mysql:host='.$host.';dbname='.$db.'',$username,$password);
+echo 'sucesss';
+}
+catch (PDOException $e)
+{
+  
+    die($e->getMessage());
+
+}
+
+// ?> -->
 
 
 
