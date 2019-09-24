@@ -6,6 +6,15 @@ $water = $_GET['water'];
 $humidity = $_GET['humidity'];
 $pir = $_GET['pir'];
 
+
+
+        if(!empty($dht) && !empty($water) &&!empty($humidity) && !empty($pir))
+{
+                echo 'suceess uri is hit';
+}
+else{
+    echo 'request failed';
+}
 $upload = new post();
 $upload->insert([
     'DHT' => $dht,
