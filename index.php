@@ -626,45 +626,45 @@
                   <h6 class="m-0 font-weight-bold text-primary">Automation Switch</h6>
                 </div>
                 <div class="card-body">
-                <form action="receive.php" class="" method="post">    
-                    <div class="form-group">
+                <form action="switch_data.php" class="" method="post">    
+                    <!-- <div class="form-group">
                         <label>UserId</label>
                         <input class="form-control" type="number" min="0" name="id"/>
-                    </div>
+                    </div> -->
                     <div class="row">
                         <div class="col">
                             <div class="form-group">
                                 <label>Switch 1</label>
-                                <select class="custom-select" name="outdoor">
-                                    <option value="on">ON</option>
-                                    <option value="off">OFF</option>
+                                <select class="custom-select" name="switch_1">
+                                    <option value="1" >ON</option>
+                                    <option value="0" >OFF</option>
                                 </select>
                             </div>
                         </div>  
                         <div class="col">
                             <div class="form-group">
                                 <label>Switch 2</label>
-                                <select class="custom-select" name="outdoor">
-                                    <option value="on">ON</option>
-                                    <option value="off">OFF</option>
+                                <select class="custom-select" name="switch_2">
+                                    <option value="1">ON</option>
+                                    <option value="0">OFF</option>
                                 </select>
                             </div>
                         </div>  
                         <div class="col">
                             <div class="form-group">
                                 <label>Switch 3</label>
-                                <select class="custom-select" name="outdoor">
-                                    <option value="on">ON</option>
-                                    <option value="off">OFF</option>
+                                <select class="custom-select" name="switch_3">
+                                    <option value="1" >ON</option>
+                                    <option value="0" >OFF</option>
                                 </select>
                             </div>
                         </div>  
                         <div class="col">
                             <div class="form-group">
                                 <label>Switch 4</label>
-                                <select class="custom-select" name="outdoor">
-                                    <option value="on">ON</option>
-                                    <option value="off">OFF</option>
+                                <select class="custom-select" name="switch_4">
+                                    <option value="1" >ON</option>
+                                    <option value="0" >OFF</option>
                                 </select>
                             </div>
                         </div>  
