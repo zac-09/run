@@ -1,5 +1,5 @@
 {
     "require": {
-        "nesbot/carbon": "^2.23"
+        "nesbot/carbon": "^2.24"
     }
 }
