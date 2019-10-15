@@ -10,6 +10,9 @@ $switch_4 = $_POST['switch_4'];
 
 
 
+
+header('Location: http://134.209.193.225/');
+
 $upload = new switch_db();
 $upload->insert([
     'relay_1' => $switch_1,
