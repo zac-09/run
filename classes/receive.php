@@ -10,7 +10,14 @@ $pir = $_GET['pir'];
 
         if(!empty($dht) && !empty($water) &&!empty($humidity) && !empty($pir))
 {
-                echo 'suceess uri is hit';
+    $db = new DB();
+    $db->switch();
+   $result = $db->first() ;
+   
+    $results = json_encode($result);
+   
+   echo $results;
+    
 }
 else{
     echo 'request failed';
