@@ -23,7 +23,10 @@ echo $results;
     
 }
 else{
-    echo 'request failed';
+    // $error = json'request failed';
+    // $error = json_encode()
+    // echo 'request failed';
+    
 }
 $upload = new post();
 $upload->insert([
