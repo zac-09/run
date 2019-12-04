@@ -8,15 +8,18 @@ $pir = $_GET['pir'];
 
 
 
+$db = new DB();
+$db->switch();
+$result = $db->first() ;
+
+$results = json_encode($result);
+
+echo $results;
+
+
         if(!empty($dht) && !empty($water) &&!empty($humidity) && !empty($pir))
 {
-    $db = new DB();
-    $db->switch();
-   $result = $db->first() ;
-   
-    $results = json_encode($result);
-   
-   echo $results;
+
     
 }
 else{
