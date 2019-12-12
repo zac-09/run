@@ -44,7 +44,7 @@
               time = data[i].created_at;
               
               html = "<tr><td >" + temperature +"</td><td> "+ water_level + "</td><td >" + humudity + "</td><td>" + soil_moisture + "</td><td>" + time + "</td></tr>";
-                $(".tab_data").html(html);
+                $("#tab_data").html(html);
 
               
               // document.getElementById('wat').innerHTML = water_level;
