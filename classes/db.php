@@ -89,7 +89,7 @@ public function getData(){
 }
 
 public function getAll(){
-    $sql = "SELECT * FROM sensors ORDER BY created_at  ";
+    $sql = "SELECT * FROM sensors ORDER BY created_at DESC ";
     
     $this->query($sql,[]);
     $results = $this->result();
