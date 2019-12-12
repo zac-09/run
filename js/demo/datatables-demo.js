@@ -38,8 +38,17 @@
             for(var i in data) {
              
               humudity = data[i].DHT;
-              console.log(humudity)
+              temperature = data[i].WATER;
+              water_level = data[i].PIR;
+              soil_moisture = data[i].HUMIDITY;
+              time = data[i].created_at;
+              
+
               document.getElementById('hud').innerHTML = humudity;
+              document.getElementById('wat').innerHTML = water_level;
+              document.getElementById('soil').innerHTML = soil_moisture;
+              document.getElementById('temp').innerHTML = temperature;
+              document.getElementById('time').innerHTML = time;
              values.push(data[i].DHT);
             }
 
