@@ -19,7 +19,7 @@ $data[] = $value;
 }
 
 
-print json_encode($data);
+print json_encode($data[0]);
 
 
 
