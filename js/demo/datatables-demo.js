@@ -38,6 +38,7 @@
             for(var i in data) {
              
               humudity = data[i].DHT;
+              console.log(humudity)
               document.getElementById('hud').innerHTML = humudity;
              values.push(data[i].DHT);
             }
