@@ -5,6 +5,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/core/int.php";
 require_once $_SERVER['DOCUMENT_ROOT'] . "/classes/db.php";
 
 use Carbon\Carbon;
+date_default_timezone_set('Africa/Kampala');
 // $db = new DB();
  
 // $results = $db->getAll();
