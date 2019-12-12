@@ -12,7 +12,7 @@ $results = $db->getAll();
 foreach($results as $result=>$value)
 {
     $time = $value->created_at;
-    $value->created_at = Carbon::createFromFormat('Y-m-d',$time)->diffForHumans(); 
+    $value->created_at = Carbon::createFromFormat('Y-m-d H:i:s', $time )->format("H:i A"); 
 $data[] = $value;
 
 }
