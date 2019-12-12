@@ -36,12 +36,12 @@
             
       
             for(var i in data) {
-             
-              humudity = data[i].DHT;
-              temperature = data[i].WATER;
-              water_level = data[i].PIR;
-              soil_moisture = data[i].HUMIDITY;
-              time = data[i].created_at;
+              console.log(i);
+              console.log(humudity = data[i].DHT);
+              console.log(temperature = data[i].WATER);
+              console.log(water_level = data[i].PIR);
+              console.log(soil_moisture = data[i].HUMIDITY);
+              console.log(time = data[i].created_at);
               
 
               
@@ -49,8 +49,8 @@
               // document.getElementById('soil').innerHTML = soil_moisture;
               // document.getElementById('temp').innerHTML = temperature;
               // document.getElementById('time').innerHTML = time;
-             console.log(i);
-                html = "<tr><td >" + temperature +"</td>td > "+ water_level + "</td><td >" + humudity + "</td><td>" + soil_moisture + "</td><td>" + time + "</td></tr>";
+           
+                html = "<tr><td >" + temperature +"</td><td> "+ water_level + "</td><td >" + humudity + "</td><td>" + soil_moisture + "</td><td>" + time + "</td></tr>";
                 document.getElementById('tab_data').innerHTML = html;
 
 
