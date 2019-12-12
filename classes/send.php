@@ -17,6 +17,7 @@ foreach($results as $result=>$value)
 $data[] = $value;
 
 }
+$data->first();
 
 print json_encode($data);
 
