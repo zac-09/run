@@ -1,11 +1,15 @@
 <?php
+header('Content-Type: application/json');
+require_once $_SERVER['DOCUMENT_ROOT'] . "/vendor/autoload.php";
 require_once $_SERVER['DOCUMENT_ROOT'] . "/core/int.php";
 require_once $_SERVER['DOCUMENT_ROOT'] . "/classes/db.php";
-use Carbon\Carbon;
 
- $db = new DB();
- $db->getData();
- foreach($db as $result=>$value)
+use Carbon\Carbon;
+$db = new DB();
+ 
+$results = $db->getAll();
+
+foreach($results as $result=>$value)
 {
     $time = $value->created_at;
     // $value->created_at = Carbon::createFromFormat('Y-m-d H:i:s', $time )->format("H:i A"); 
@@ -13,12 +17,14 @@ use Carbon\Carbon;
 $data[] = $value;
 
 }
-// $result = $db->first() ;
 
- $results = json_encode($data);
+print json_encode($data);
 
-echo $results;
- 
+
+
+// $timestamp = $result['created_at'];
+// $date = Carbon::createFromFormat('Y-m-d H:i:s', $timestamp )->format("H:i A");
+// echo $date;
 
 
 
