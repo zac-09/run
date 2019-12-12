@@ -88,6 +88,13 @@ public function getData(){
     return $results;
 }
 
+public function getAll(){
+    $sql = "SELECT * FROM sensors ORDER BY created_at  ";
+    
+    $this->query($sql,[]);
+    $results = $this->result();
+    return $results;
+}
 public function switch(){
     $sql = "SELECT * FROM swtich ORDER BY created_at DESC LIMIT 12 ";
     
