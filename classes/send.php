@@ -5,22 +5,22 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/core/int.php";
 require_once $_SERVER['DOCUMENT_ROOT'] . "/classes/db.php";
 
 use Carbon\Carbon;
-$db = new DB();
+// $db = new DB();
  
-$results = $db->getAll();
+// $results = $db->getAll();
 
-foreach($results as $result=>$value)
-{
-    $time = $value->created_at;
-    // $value->created_at = Carbon::createFromFormat('Y-m-d H:i:s', $time )->format("H:i A"); 
-    $value->created_at = Carbon::createFromFormat('Y-m-d H:i:s', $time )->diffForHumans(); 
-$data[] = $value;
+// foreach($results as $result=>$value)
+// {
+//     $time = $value->created_at;
+//     // $value->created_at = Carbon::createFromFormat('Y-m-d H:i:s', $time )->format("H:i A"); 
+//     $value->created_at = Carbon::createFromFormat('Y-m-d H:i:s', $time )->diffForHumans(); 
+// $data[] = $value;
 
-}
+// }
 
 
-print json_encode($data[0]);
-
+// print json_encode($data[0]);
+printf("Right now is %s", Carbon::now()->toDateTimeString());
 
 
 // $timestamp = $result['created_at'];
