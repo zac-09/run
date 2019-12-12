@@ -38,7 +38,7 @@
             for(var i in data) {
              
               humudity = data[i].DHT;
-              document.getElementById('soil-value').innerHTML = humudity;
+              document.getElementById('hud').innerHTML = humudity;
              values.push(data[i].DHT);
             }
 
