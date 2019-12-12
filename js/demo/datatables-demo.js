@@ -44,12 +44,19 @@
               time = data[i].created_at;
               
 
-              document.getElementById('hud').innerHTML = humudity;
-              document.getElementById('wat').innerHTML = water_level;
-              document.getElementById('soil').innerHTML = soil_moisture;
-              document.getElementById('temp').innerHTML = temperature;
-              document.getElementById('time').innerHTML = time;
-             values.push(data[i].DHT);
+              
+              // document.getElementById('wat').innerHTML = water_level;
+              // document.getElementById('soil').innerHTML = soil_moisture;
+              // document.getElementById('temp').innerHTML = temperature;
+              // document.getElementById('time').innerHTML = time;
+             
+                html = "<tr><td >" + temperature +"</td>td > "+ water_level + "</td><td >" + humidity + "</td><td>" + soil_moisture + "</td><td>" + time + "</td></tr>";
+                document.getElementById('tab_data').innerHTML = html;
+
+
+
+
+
             }
 
 
