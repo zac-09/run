@@ -49,7 +49,7 @@
               // document.getElementById('soil').innerHTML = soil_moisture;
               // document.getElementById('temp').innerHTML = temperature;
               // document.getElementById('time').innerHTML = time;
-             
+             console.log(i);
                 html = "<tr><td >" + temperature +"</td>td > "+ water_level + "</td><td >" + humudity + "</td><td>" + soil_moisture + "</td><td>" + time + "</td></tr>";
                 document.getElementById('tab_data').innerHTML = html;
 
