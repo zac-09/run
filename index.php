@@ -386,6 +386,9 @@
                 document.getElementById('humidity-value').innerHTML = output.HUMIDITY;
                 document.getElementById('pir-value').innerHTML = output.PIR;
                 document.getElementById('time').innerHTML = output.created_at;
+                document.getElementById('time1').innerHTML = output.created_at;
+                document.getElementById('time2').innerHTML = output.created_at;
+                document.getElementById('time3').innerHTML = output.created_at;
               }
             }
       xhr.send();
@@ -405,7 +408,7 @@
                       <div class="h5 mb-0 font-weight-bold text-gray-800" id ="water-value"> <span>°C</span></div>
                     </div>
                     <div class="col-auto">
-                      <i class="time" name="time"></i>
+                      <i class="time" name="time" id="time1"></i>
                     </div>
                   </div>
                 </div>
@@ -431,7 +434,7 @@
                       </div>
                     </div>
                     <div class="col-auto">
-                      <i class="time" name="time"></i>
+                      <i class="time" name="time" id="time2"></i>
                     </div>
                   </div>
                 </div>
@@ -448,7 +451,7 @@
                       <div class="h5 mb-0 font-weight-bold text-gray-800" id="pir-value"> <span></span></div>
                     </div>
                     <div class="col-auto">
-                      <i class="time" name="time"></i>
+                      <i class="time" name="time" id = "time3"></i>
                     </div>
                   </div>
                 </div>
