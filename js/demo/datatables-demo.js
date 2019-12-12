@@ -26,7 +26,7 @@
 
       $(document).ready(function(){
         $.ajax({
-          url : "http://134.209.193.225/classes/lineGraph.php",
+          url : "http://134.209.193.225/classes/tables.php",
           type : "GET",
           success : function(data){
             console.log(data);
