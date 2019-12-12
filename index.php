@@ -357,7 +357,7 @@
                       <div id="soil-value" class="h5 mb-0 font-weight-bold text-gray-800"></div>
                     </div>
                     <div class="col-auto">
-                      <i class="fas fa-water fa-2x text-gray-300"></i>
+                      <i class="fas fa-water fa-2x text-gray-300">20s ago</i>
                     </div>
                   </div>
                 </div>
