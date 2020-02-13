@@ -5,6 +5,7 @@ $dht = $_GET['dht'];
 $water = $_GET['water'];
 $humidity = $_GET['humidity'];
 $pir = $_GET['pir'];
+date_default_timezone_set('Africa/Kampala');
 
 
 
@@ -36,12 +37,3 @@ $upload->insert([
     'PIR' => $pir
 
 ]);
-
-
-
-
-
-
-
-
-?>

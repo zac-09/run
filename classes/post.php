@@ -1,6 +1,8 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . "/core/int.php";
 require_once $_SERVER['DOCUMENT_ROOT'] . "/classes/db.php";
+date_default_timezone_set('Africa/Kampala');
+
 class post{
 protected $_db;
 
@@ -20,19 +22,3 @@ $this->_db->insert('sensors',$fields);
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-?>
