@@ -1,7 +1,8 @@
 <?php
 date_default_timezone_set('Africa/Kampala');
 $timezone = date_default_timezone_get();
-echo "The current server timezone is: " . $timezone;
+$date = date('m/d/Y h:i:s a', time());
+echo "The current server timezone is: " . $date;
 
 ?>
 
