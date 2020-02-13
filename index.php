@@ -1,7 +1,7 @@
-
 <?php
 date_default_timezone_set('Africa/Kampala');
-
+$timezone = date_default_timezone_get();
+echo "The current server timezone is: " . $timezone;
 
 ?>
 
@@ -43,7 +43,7 @@ date_default_timezone_set('Africa/Kampala');
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
         <div class="sidebar-brand-icon">
-          <img src="sitepics/lg.jpeg"/>
+          <img src="sitepics/lg.jpeg" />
         </div>
         <div class="sidebar-brand-text mx-3">Run Automations<sup></sup></div>
       </a>
@@ -185,19 +185,19 @@ date_default_timezone_set('Africa/Kampala');
               <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="fas fa-search fa-fw"></i>
               </a> -->
-              <!-- Dropdown - Messages -->
-              <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
-                <form class="form-inline mr-auto w-100 navbar-search">
-                  <div class="input-group">
-                    <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
-                    <div class="input-group-append">
-                      <button class="btn btn-primary" type="button">
-                        <i class="fas fa-search fa-sm"></i>
-                      </button>
-                    </div>
+            <!-- Dropdown - Messages -->
+            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
+              <form class="form-inline mr-auto w-100 navbar-search">
+                <div class="input-group">
+                  <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                  <div class="input-group-append">
+                    <button class="btn btn-primary" type="button">
+                      <i class="fas fa-search fa-sm"></i>
+                    </button>
                   </div>
-                </form>
-              </div>
+                </div>
+              </form>
+            </div>
             </li>
 
             <!-- Nav Item - Alerts -->
@@ -370,39 +370,35 @@ date_default_timezone_set('Africa/Kampala');
             </div>
 
 
-        <script>
-        document.getElementById('page-top').addEventListener('mousemove',soilData);
+            <script>
+              document.getElementById('page-top').addEventListener('mousemove', soilData);
 
 
-        function soilData(){
-          var xhr = new XMLHttpRequest();
-            xhr.open('GET','classes/send.php',true);
-           
+              function soilData() {
+                var xhr = new XMLHttpRequest();
+                xhr.open('GET', 'classes/send.php', true);
 
-            xhr.onload = function(){
-              if(this.status == 200){
-                   var output = '';
-              var data = JSON.parse(this.responseText);
-                
-          output = data;
 
-                document.getElementById('soil-value').innerHTML = output.DHT;
-                document.getElementById('water-value').innerHTML = output.WATER;
-                document.getElementById('humidity-value').innerHTML = output.HUMIDITY;
-                document.getElementById('pir-value').innerHTML = output.PIR;
-                document.getElementById('time').innerHTML = output.created_at;
-                document.getElementById('time1').innerHTML = output.created_at;
-                document.getElementById('time2').innerHTML = output.created_at;
-                document.getElementById('time3').innerHTML = output.created_at;
+                xhr.onload = function() {
+                  if (this.status == 200) {
+                    var output = '';
+                    var data = JSON.parse(this.responseText);
+
+                    output = data;
+
+                    document.getElementById('soil-value').innerHTML = output.DHT;
+                    document.getElementById('water-value').innerHTML = output.WATER;
+                    document.getElementById('humidity-value').innerHTML = output.HUMIDITY;
+                    document.getElementById('pir-value').innerHTML = output.PIR;
+                    document.getElementById('time').innerHTML = output.created_at;
+                    document.getElementById('time1').innerHTML = output.created_at;
+                    document.getElementById('time2').innerHTML = output.created_at;
+                    document.getElementById('time3').innerHTML = output.created_at;
+                  }
+                }
+                xhr.send();
               }
-            }
-      xhr.send();
-        }
-
-
-
-        
-        </script>
+            </script>
             <!-- Earnings (Monthly) Card Example -->
             <div class="col-xl-3 col-md-6 mb-4">
               <div class="card border-left-success shadow h-100 py-2">
@@ -410,7 +406,7 @@ date_default_timezone_set('Africa/Kampala');
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                       <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Soil Moisture</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800" id ="water-value"> <span>°C</span></div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800" id="water-value"> <span>°C</span></div>
                     </div>
                     <div class="col-auto">
                       <i class="time" name="time" id="time1"></i>
@@ -472,117 +468,117 @@ date_default_timezone_set('Africa/Kampala');
               </div>
             </div>
 
-          <!-- Content Row -->
+            <!-- Content Row -->
 
-          <div class="row">
+            <div class="row">
 
-            <!-- Area Chart -->
-            <div class="col-xl-8 col-lg-7">
-              <div class="card shadow mb-4">
-                <!-- Card Header - Dropdown -->
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Temperature</h6>
-                  <div class="dropdown no-arrow">
-                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                      <div class="dropdown-header">Dropdown Header:</div>
-                      <a class="dropdown-item" href="#">Real Time</a>
-                      <a class="dropdown-item" id="weekly" href="#">Weekly</a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#">Monthly</a>
-                      <a class="dropdown-item" href="#">Yearly</a>
+              <!-- Area Chart -->
+              <div class="col-xl-8 col-lg-7">
+                <div class="card shadow mb-4">
+                  <!-- Card Header - Dropdown -->
+                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Temperature</h6>
+                    <div class="dropdown no-arrow">
+                      <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                        <div class="dropdown-header">Dropdown Header:</div>
+                        <a class="dropdown-item" href="#">Real Time</a>
+                        <a class="dropdown-item" id="weekly" href="#">Weekly</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Monthly</a>
+                        <a class="dropdown-item" href="#">Yearly</a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Card Body -->
+                  <div class="card-body">
+                    <div class="chart-area">
+                      <canvas id="myAreaChart"></canvas>
                     </div>
                   </div>
                 </div>
-                <!-- Card Body -->
-                <div class="card-body">
-                  <div class="chart-area">
-                    <canvas id="myAreaChart"></canvas>
+              </div>
+
+              <!-- Pie Chart -->
+              <div class="col-xl-4 col-lg-5">
+                <div class="card shadow mb-4">
+                  <!-- Card Header - Dropdown -->
+                  <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Average Temperature</h6>
+                    <div class="dropdown no-arrow">
+                      <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                        <div class="dropdown-header">Dropdown Header:</div>
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Card Body -->
+                  <div class="card-body">
+                    <div class="chart-pie pt-4 pb-2">
+                      <canvas id="myPieChart"></canvas>
+                    </div>
+                    <div class="mt-4 text-center small">
+                      <span class="mr-2">
+                        <i class="fas fa-circle text-primary"></i> Morning
+                      </span>
+                      <span class="mr-2">
+                        <i class="fas fa-circle text-success"></i> Afternoon
+                      </span>
+                      <span class="mr-2">
+                        <i class="fas fa-circle text-info"></i> Night
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <!-- Pie Chart -->
-            <div class="col-xl-4 col-lg-5">
-              <div class="card shadow mb-4">
-                <!-- Card Header - Dropdown -->
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Average Temperature</h6>
-                  <div class="dropdown no-arrow">
-                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                      <div class="dropdown-header">Dropdown Header:</div>
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#">Something else here</a>
+
+            <!-- Content Row -->
+            <div class="row">
+
+              <!-- Content Column -->
+              <div class="col-lg-6 mb-4">
+
+                <!-- Project Card Example -->
+                <div class="card shadow mb-4">
+                  <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Switch Duration</h6>
+                  </div>
+                  <div class="card-body">
+                    <h4 class="small font-weight-bold">Switch1 <span class="float-right">20%</span></h4>
+                    <div class="progress mb-4">
+                      <div class="progress-bar bg-danger" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <h4 class="small font-weight-bold">Switch2 <span class="float-right">40%</span></h4>
+                    <div class="progress mb-4">
+                      <div class="progress-bar bg-warning" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <h4 class="small font-weight-bold">Switch3 <span class="float-right">60%</span></h4>
+                    <div class="progress mb-4">
+                      <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <h4 class="small font-weight-bold">Switch4 <span class="float-right">80%</span></h4>
+                    <div class="progress mb-4">
+                      <div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <h4 class="small font-weight-bold">Switch5 <span class="float-right">Complete!</span></h4>
+                    <div class="progress">
+                      <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                   </div>
                 </div>
-                <!-- Card Body -->
-                <div class="card-body">
-                  <div class="chart-pie pt-4 pb-2">
-                    <canvas id="myPieChart"></canvas>
-                  </div>
-                  <div class="mt-4 text-center small">
-                    <span class="mr-2">
-                      <i class="fas fa-circle text-primary"></i> Morning
-                    </span>
-                    <span class="mr-2">
-                      <i class="fas fa-circle text-success"></i> Afternoon
-                    </span>
-                    <span class="mr-2">
-                      <i class="fas fa-circle text-info"></i> Night
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-       
 
-          <!-- Content Row -->
-          <div class="row">
-
-            <!-- Content Column -->
-            <div class="col-lg-6 mb-4">
-
-              <!-- Project Card Example -->
-              <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">Switch Duration</h6>
-                </div>
-                <div class="card-body">
-                  <h4 class="small font-weight-bold">Switch1 <span class="float-right">20%</span></h4>
-                  <div class="progress mb-4">
-                    <div class="progress-bar bg-danger" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <h4 class="small font-weight-bold">Switch2 <span class="float-right">40%</span></h4>
-                  <div class="progress mb-4">
-                    <div class="progress-bar bg-warning" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <h4 class="small font-weight-bold">Switch3 <span class="float-right">60%</span></h4>
-                  <div class="progress mb-4">
-                    <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <h4 class="small font-weight-bold">Switch4 <span class="float-right">80%</span></h4>
-                  <div class="progress mb-4">
-                    <div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <h4 class="small font-weight-bold">Switch5 <span class="float-right">Complete!</span></h4>
-                  <div class="progress">
-                    <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Color System -->
-              <!-- <div class="row">
+                <!-- Color System -->
+                <!-- <div class="row">
                 <div class="col-lg-6 mb-4">
                   <div class="card bg-primary text-white shadow">
                     <div class="card-body">
@@ -633,144 +629,144 @@ date_default_timezone_set('Africa/Kampala');
                 </div>
               </div> -->
 
-            </div>
+              </div>
 
-            <div class="col-lg-6 mb-4">
+              <div class="col-lg-6 mb-4">
 
-              <!-- Illustrations -->
-              <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">Automation Switch</h6>
-                </div>
-                <div class="card-body">
-                <form action="switch_data.php" class="" method="post">    
-                    <!-- <div class="form-group">
+                <!-- Illustrations -->
+                <div class="card shadow mb-4">
+                  <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Automation Switch</h6>
+                  </div>
+                  <div class="card-body">
+                    <form action="switch_data.php" class="" method="post">
+                      <!-- <div class="form-group">
                         <label>UserId</label>
                         <input class="form-control" type="number" min="0" name="id"/>
                     </div> -->
-                    <div class="row">
+                      <div class="row">
                         <div class="col">
-                            <div class="form-group">
-                                <label>Switch 1</label>
-                                <select class="custom-select" name="switch_1">
-                                    <option value="1" >ON</option>
-                                    <option value="0" >OFF</option>
-                                </select>
-                            </div>
-                        </div>  
+                          <div class="form-group">
+                            <label>Switch 1</label>
+                            <select class="custom-select" name="switch_1">
+                              <option value="1">ON</option>
+                              <option value="0">OFF</option>
+                            </select>
+                          </div>
+                        </div>
                         <div class="col">
-                            <div class="form-group">
-                                <label>Switch 2</label>
-                                <select class="custom-select" name="switch_2">
-                                    <option value="1">ON</option>
-                                    <option value="0">OFF</option>
-                                </select>
-                            </div>
-                        </div>  
+                          <div class="form-group">
+                            <label>Switch 2</label>
+                            <select class="custom-select" name="switch_2">
+                              <option value="1">ON</option>
+                              <option value="0">OFF</option>
+                            </select>
+                          </div>
+                        </div>
                         <div class="col">
-                            <div class="form-group">
-                                <label>Switch 3</label>
-                                <select class="custom-select" name="switch_3">
-                                    <option value="1" >ON</option>
-                                    <option value="0" >OFF</option>
-                                </select>
-                            </div>
-                        </div>  
+                          <div class="form-group">
+                            <label>Switch 3</label>
+                            <select class="custom-select" name="switch_3">
+                              <option value="1">ON</option>
+                              <option value="0">OFF</option>
+                            </select>
+                          </div>
+                        </div>
                         <div class="col">
-                            <div class="form-group">
-                                <label>Switch 4</label>
-                                <select class="custom-select" name="switch_4">
-                                    <option value="1" >ON</option>
-                                    <option value="0" >OFF</option>
-                                </select>
-                            </div>
-                        </div>  
-                    </div>
-                     
-                    
-                    
-                    <input type="submit" class="btn btn-primary" value="Update Device!">
-                  
-                </form>                                
-                </div>
-              </div>
+                          <div class="form-group">
+                            <label>Switch 4</label>
+                            <select class="custom-select" name="switch_4">
+                              <option value="1">ON</option>
+                              <option value="0">OFF</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
 
-              <!-- Approach -->
-              <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">Summary</h6>
-                </div>
-                <div class="card-body">
-                  <p>This is an interface to offer both automation and monitoring services to the client.</p>
-                  <p class="mb-0"> </p>
-                </div>
-              </div>
 
+
+                      <input type="submit" class="btn btn-primary" value="Update Device!">
+
+                    </form>
+                  </div>
+                </div>
+
+                <!-- Approach -->
+                <div class="card shadow mb-4">
+                  <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Summary</h6>
+                  </div>
+                  <div class="card-body">
+                    <p>This is an interface to offer both automation and monitoring services to the client.</p>
+                    <p class="mb-0"> </p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+          <!-- /.container-fluid -->
+
+        </div>
+        <!-- End of Main Content -->
+
+        <!-- Footer -->
+        <footer class="sticky-footer bg-white">
+          <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+              <span>Copyright &copy; Run Automations 2019</span>
             </div>
           </div>
-
-        </div>
-        <!-- /.container-fluid -->
+        </footer>
+        <!-- End of Footer -->
 
       </div>
-      <!-- End of Main Content -->
+      <!-- End of Content Wrapper -->
 
-      <!-- Footer -->
-      <footer class="sticky-footer bg-white">
-        <div class="container my-auto">
-          <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Run Automations 2019</span>
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+            <a class="btn btn-primary" href="login.html">Logout</a>
           </div>
         </div>
-      </footer>
-      <!-- End of Footer -->
-
-    </div>
-    <!-- End of Content Wrapper -->
-
-  </div>
-  <!-- End of Page Wrapper -->
-
-  <!-- Scroll to Top Button-->
-  <a class="scroll-to-top rounded" href="#page-top">
-    <i class="fas fa-angle-up"></i>
-  </a>
-
-  <!-- Logout Modal-->
-  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">×</span>
-          </button>
-        </div>
-        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-        <div class="modal-footer">
-          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="login.html">Logout</a>
-        </div>
       </div>
     </div>
-  </div>
 
-  <!-- Bootstrap core JavaScript-->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Core plugin JavaScript-->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-  <!-- Custom scripts for all pages-->
-  <script src="js/sb-admin-2.min.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
 
-  <!-- Page level plugins -->
-  <script src="vendor/chart.js/Chart.min.js"></script>
+    <!-- Page level plugins -->
+    <script src="vendor/chart.js/Chart.min.js"></script>
 
-  <!-- Page level custom scripts -->
-  <script src="js/demo/chart-area-demo.js"></script>
-  <script src="js/demo/chart-pie-demo.js"></script>
+    <!-- Page level custom scripts -->
+    <script src="js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
 
 </body>
 
