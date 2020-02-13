@@ -1,6 +1,6 @@
 <?php
  require_once $_SERVER['DOCUMENT_ROOT'] . "/classes/config.php";
-
+ date_default_timezone_set('Africa/Kampala');
 
 session_start();
 
@@ -41,5 +41,3 @@ if($harsh->count()){
 
 
 require_once $_SERVER['DOCUMENT_ROOT'] . "/functions/sanitize.php";
-
-?>
