@@ -31,6 +31,6 @@ $upload->insert([
     'WATER' => $water,
     'HUMIDITY' => $humidity,
     'PIR' => $pir,
-    'created_at' => $date
+
 
 ]);
